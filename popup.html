@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GitHub Operational Status</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      #github {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #github td,
+      #github th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #github tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      #github tr:hover {
+        background-color: #ddd;
+      }
+
+      #github th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #24292e;
+        color: white;
+      }
+
+      .dot {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #bbb;       
+      }
+
+      .status {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #bbb;
+      }
+
+      #github td:nth-child(even) {
+        text-align: center;
+      }
+
+        .loader {
+        border: 2px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 2px solid #32CD32;
+        border-right: 2px solid #0088FF;
+        border-bottom: 2px solid #FF9900;
+        border-left: 2px solid #FF033E;
+        height: 20px;
+        width: 20px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+      }
+
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+</head>
+
+<body>
+      <table id="github">
+        <tr>
+          <th><img src="images/gh.png" alt="" srcset=""></th>
+          <th><div id="all" class="status"></div></th>
+        </tr>
+        <tr>
+          <td>Git Operations</td>
+          <td><div id="ops" class="loader"></div></td>
+        </tr>
+        <tr>
+          <td>API Requests</td>
+          <td><div id="api" class="loader"></div></td>
+        </tr>
+        <tr>
+          <td>WebHooks</td>
+          <td><div id="whk" class="loader"></div></td>
+        </tr>
+        <tr>
+          <td>GitHub Issues</td>
+          <td><div id="issues" class="loader"></div></td>
+        </tr>
+        <tr>
+          <td>Pull Requests</td>
+          <td><div id="prs" class="loader"></div></td>
+        </tr>
+        <tr>
+          <td>GitHub Actions</td>
+          <td><div id="actions" class="loader"></div></td>
+        </tr>
+        <tr>
+          <td>GitHub Packages</td>
+          <td><div id="pack" class="loader"></div></td>
+        </tr>
+        <tr>
+          <td>GitHub Pages</td>
+          <td><div id="pages" class="loader"></div></td>
+        </tr>
+      </table>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

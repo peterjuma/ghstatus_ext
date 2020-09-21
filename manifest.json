@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "GitHub Status",
+  "description": "GitHub Operational Status",
+  "version": "1.0.0",
+  "icons": {
+    "128": "icons8-octocat-128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons8-octocat-19.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"]
+}
