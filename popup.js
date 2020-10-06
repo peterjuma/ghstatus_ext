@@ -48,7 +48,6 @@ fetch(statusURL)
         }
 
         ghstatus.components.forEach((component) => {
-            console.log(component.name)
             for (var ghcomponent in gh_components) {
                 if (component.name === gh_components[ghcomponent]) {
                     switch (component.status.toLowerCase()) {
@@ -57,22 +56,22 @@ fetch(statusURL)
                             document.getElementById(ghcomponent).classList.remove("loader");
                             document.getElementById(ghcomponent).classList.add("dot");
                             break;
-                        case "under maintenance":
+                        case "under_maintenance":
                             document.getElementById(ghcomponent).style.backgroundColor = '#0088FF';
                             document.getElementById(ghcomponent).classList.remove("loader");
                             document.getElementById(ghcomponent).classList.add("dot");
                             break;
-                        case "degraded performance":
+                        case "degraded_performance":
                             document.getElementById(ghcomponent).style.backgroundColor = '#FFFF00';
                             document.getElementById(ghcomponent).classList.remove("loader");
                             document.getElementById(ghcomponent).classList.add("dot");
                             break;
-                        case "partial outage":
+                        case "partial_outage":
                             document.getElementById(ghcomponent).style.backgroundColor = '#FF9900';
                             document.getElementById(ghcomponent).classList.remove("loader");
                             document.getElementById(ghcomponent).classList.add("dot");
                             break;
-                        case "major outage":
+                        case "major_outage":
                             document.getElementById(ghcomponent).style.backgroundColor = '#FF033E';
                             document.getElementById(ghcomponent).classList.remove("loader");
                             document.getElementById(ghcomponent).classList.add("dot");
