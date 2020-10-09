@@ -1,7 +1,4 @@
-// Future JavaScript will go here
-// alert("Start here")
-
-const statusURL='https://www.githubstatus.com//api/v2/summary.json'
+const statusURL='https://www.githubstatus.com/api/v2/summary.json'
 
 const allops = document.getElementById("all")
 
